@@ -4,14 +4,14 @@ require('dotenv').config
 })
 module.exports = {
   siteMetadata: {
-    title:`The Curiosity of Randomness`,
-    description: `ITDEV-164-600`,
+    title:`Jason Hicks`,
+    description: `My side of the internet`,
     author: `Jason Hicks`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: 
     {
       name: `Jason Hicks `,
-      company: `Lack of Pattern or Predictability `,
+      email: `Jason-Hicks@outlook.com`,
       address: `At The Corner Of Nowhere And Everyhwere `
     }
   },

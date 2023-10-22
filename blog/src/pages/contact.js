@@ -5,13 +5,13 @@ import  Layout  from "../components/layout";
 import Seo from "../components/seo"
 
 const Contact = ({data}) =>{
-    const { name, company, address } = data.site.siteMetadata.contact;
+    const { name, email, address } = data.site.siteMetadata.contact;
     return(
         <Layout>
             <Seo title="Contact" />
-            <h1>Contact Us </h1>
+            <h1>Contact</h1>
             <p>Please send all inpueries to: </p>
-            <p>{company}</p>
+            <p>{email}</p>
             <p>{`C/O ${name}`}</p>
             <p>{address}</p>
             <div style={{ maxWidth: `500px`, marginBottom: `1.45rem` }}>
@@ -41,7 +41,7 @@ export const query = graphql`
                 contact
                 {
                     name
-                    company
+                    email
                     address
                 }
             }

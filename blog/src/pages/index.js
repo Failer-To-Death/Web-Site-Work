@@ -18,20 +18,9 @@ grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Grid>
-      {
-        data.allContentfulItemSale.edges.map(edge => (
-          <Card width={300} p={3} key={edge.node.id}>
-            <Link to={edge.node.slug}>
-              <GatsbyImage
-                image={edge.node.heroImage.gatsbyImage}
-              />
-            </Link>
-            <Heading>{edge.node.name}</Heading>
-          </Card>
-        ))
-      }
-    </Grid>
+
+      <h1>test for header</h1>
+
   </Layout>
 )
 
@@ -43,35 +32,3 @@ const IndexPage = ({ data }) => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
-
-export const query = graphql`
-{
-  allContentfulItemSale
-  {
-    edges
-    {
-      node
-      {
-        name
-        slug
-        description
-        {
-          childMarkdownRemark
-          {
-            excerpt
-          }
-        }
-        heroImage
-        {
-          gatsbyImage
-          (
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 600
-          )
-        }
-      }
-    }
-  }
-}
-`

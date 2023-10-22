@@ -5,13 +5,13 @@ import  Layout  from "../components/layout";
 import Seo from "../components/seo"
 
 const About = ({data}) =>{
-    const { name, company } = data.site.siteMetadata.contact;
+    const { name, email } = data.site.siteMetadata.contact;
     return(
         <Layout>
             <Seo title="About" />
-            <h1>About Us</h1>
-            <p>{`${company}was started by ${name} in 2023.`}</p>
-            <p>{`At ${company} we sell everything we can get our hands on!`}</p>
+            <h1>About me</h1>
+            <p>{`${email}`}</p>
+            <p>{`this will be a website that I will use to show my projects `}</p>
             <div style={{ maxWidth: `300px` , marginBottom: `1.45rem`}}>
                 <StaticImage
                     src="../images/Random.jpg"
@@ -39,7 +39,7 @@ export const query = graphql`
                 contact
                 {
                     name
-                    company
+                    email
                 }
             }
         }

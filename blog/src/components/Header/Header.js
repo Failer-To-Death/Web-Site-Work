@@ -68,6 +68,7 @@ const Header = ({ siteTitle }) =>
               <StyledLink to="/">Home</StyledLink>
               <StyledLink to="/about">About</StyledLink>
               <StyledLink to="/contact">Contact</StyledLink>
+              <StyledLink to="/projects">Projects</StyledLink>
             </MediaQuery>
             <SearchButton variant="contrast" />
           </Nav>
